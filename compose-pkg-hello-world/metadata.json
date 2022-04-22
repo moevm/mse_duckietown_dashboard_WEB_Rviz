@@ -1,0 +1,14 @@
+{
+    "name": "Hello world",
+    "description": "Provides a page that displays hello world message",
+    "dependencies": {
+        "system-packages": [],
+        "packages": []
+    },
+    "compatibility": {
+        "compose": {
+            "minimum": "v1.0.0",
+            "maximum": "v2.0.0"
+        }
+    }
+}
