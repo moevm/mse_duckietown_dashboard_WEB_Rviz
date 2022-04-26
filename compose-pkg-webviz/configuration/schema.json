@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "details": "webviz package configuration",
+    "_data": {
+        "hostname": {
+            "type": "text",
+            "default": null,
+            "details": "Hostname of webviz"
+        },
+        "port": {
+            "type": "text",
+            "default": 8080,
+            "details": "Port of webviz" 
+        }
+    }
+}
