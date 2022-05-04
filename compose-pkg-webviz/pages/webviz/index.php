@@ -52,7 +52,7 @@ if(strlen($bridgeHost) == 0 || strlen($bridgePort) == 0){
        if (strlen($bridgeUrl) > 0) {
            echo $url . "?websocket=" . $bridgeUrl;
        } else {
-           echo $url . "?websocket=" . $bridgeUrl;
+           echo $url;
        }?>"
   frameborder="0"
   scrolling="yes"
