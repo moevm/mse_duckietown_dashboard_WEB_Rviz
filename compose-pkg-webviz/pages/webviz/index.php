@@ -48,7 +48,12 @@ if(strlen($bridgeHost) == 0 || strlen($bridgePort) == 0){
 
 <iframe
   id="webviz_iframe"
-  src="<?php echo $url . "?websocket=" . $bridgeUrl ?>"
+  src="<?php 
+       if (strlen($bridgeUrl) > 0) {
+           echo $url . "?websocket=" . $bridgeUrl;
+       } else {
+           echo $url . "?websocket=" . $bridgeUrl;
+       }?>"
   frameborder="0"
   scrolling="yes"
 ></iframe>
