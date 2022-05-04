@@ -17,12 +17,11 @@
 2. Местоположение всех пользовательских пакетов находится в директории "/user-data/packages/".
 3. Необходимо переместить загруженный пакет в директорию из пункта 2.
 
-Инструкция по установке ROS Docker:
-http://wiki.ros.org/docker/Tutorials/Docker
-1.	Скачиваем Docker Desktop https://docs.docker.com/get-docker/
-2.	В консоли (для Windows cmd) пишем  
-docker pull ros
-docker pull ros:noetic-robot
-3.	Запускаем 
-docker run -it ros
+Инструкция по запуску проекта:
+1) Запуск compose:
+![image](https://user-images.githubusercontent.com/54946557/166717450-cdaedf89-2808-4d4a-a49a-da22f3fd7f54.png)  
+2) Запуск второго контейнера:
+docker run -p 8080:8080 [image id]
+3) Перейти в браузере по ссылке: http://localhost:80
+![image](https://user-images.githubusercontent.com/54946557/166718314-57912e4f-51de-4c25-a517-db32a127a552.png)
 
