@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "details": "webviz package configuration",
+    "_data": {
+        "webviz_hostname": {
+            "type": "text",
+            "default": "localhost",
+            "details": "Hostname of webviz"
+        },
+        "webviz_port": {
+            "type": "text",
+            "default": 8080,
+            "details": "Port of webviz" 
+        },
+        "ros_hostname": {
+            "type": "text",
+            "default": "",
+            "details": "Hostname of RosBridge"
+        },
+        "ros_port": {
+            "type": "text",
+            "default": 9090,
+            "details": "Port of RosBridge"
+        }
+    }
+}
