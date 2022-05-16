@@ -28,12 +28,15 @@ Foxglove — это веб-приложение для воспроизведе�
 1. Запустить  compose:
  <pre><code> docker run [image_id]
 </code></pre>
-2. Запустить второй контейнер:
+2. Клонируем репозиторий:
+<pre><code> git clone https://github.com/lastrise/studio.git
+</code></pre>
+3. Запустить второй контейнер:
 <pre><code> docker run -p 8080:8080 [image id]</code></pre>
-3. Перейти в браузере по ссылке: http://localhost:80    
+4. Перейти в браузере по ссылке: http://localhost:80    
 Страница профиля Duckietown Dashboard:
 ![image](https://user-images.githubusercontent.com/54946557/167317629-ddec2094-efbc-485c-964f-f1db94b0b6ac.png)
-4. Нажать на кнопку: "Webviz".   
+5. Нажать на кнопку: "Webviz".   
 Приложение для визуализации Webviz: 
 ![image](https://user-images.githubusercontent.com/54946557/167317709-908c0edc-bd11-4082-a423-2c75023395bc.png)
 
