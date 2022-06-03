@@ -40,8 +40,10 @@ mv mse_duckietown_dashboard_WEB_Rviz ./webviz</code></pre>
 
 # Запуск Duckietown Dashbord:
 Сначала нужно собрать образы контейнеров: foxglove , \compose\ :
+
 Для этого нужно запустить контейнер afdaniele/compose: 
 <pre><code>docker run -p 80:80 [image_id]</code></pre>
+
 Запустить контейнер foxglove:
 <pre><code>docker run -p 8080:8080 [image_id]</code></pre>
 image_id - идентификатор image, который можно посмотреть с помощью команды:
