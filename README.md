@@ -49,7 +49,7 @@ mv mse_duckietown_dashboard_WEB_Rviz ./webviz</code></pre>
 image_id - идентификатор image, который можно посмотреть с помощью команды:
 <pre><code>docker image ls</code></pre>
 
-Затем перейти в браузере по ссылке: http://localhost:8080. Выполнить установку \compose\ по инструкции, которая будет выведена на экран после шага(Skip; Next; Finish; Sign in as Developer). Адрес и порт визуализатора настраиваются в настройках \compose\, а именно в \compose\ зайти во вкладку Settings >> Package: webviz, установить Webviz port: 80.
+Затем перейти в браузере по ссылке: http://localhost:8080. Выполнить установку \compose\ по инструкции, которая будет выведена на экран после шага(Skip; Next; Finish; Sign in as Developer). Адрес и порт визуализатора настраиваются в настройках \compose\ , а именно в \compose\ зайти во вкладку Settings >> Package: webviz, установить Webviz port: 80.
 
 ![image](https://user-images.githubusercontent.com/54946557/167693601-94850600-012a-4423-850a-7e3f7b240ca1.png)
 Рисунок 1.3 - Окно после регистрации в \compose\.
