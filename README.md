@@ -37,7 +37,7 @@ git clone https://github.com/moevm/mse_duckietown_dashboard_WEB_Rviz
 mv mse_duckietown_dashboard_WEB_Rviz ./webviz</code></pre>
 
 # Запуск Duckietown Dashbord:
-Сначала нужно собрать образы контейнеров: foxglove , \compose\ :
+Сначала нужно собрать образы контейнеров: foxglove, \compose\ :
 
 Для этого нужно запустить контейнер afdaniele/compose: 
 <pre><code>docker run -p 80:80 [image_id]</code></pre>
