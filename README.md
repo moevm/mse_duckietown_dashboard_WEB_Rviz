@@ -16,14 +16,14 @@ Foxglove — это веб-приложение для воспроизведе�
 ![image](https://user-images.githubusercontent.com/54946557/161268701-40236ee6-8c53-41de-800a-aa28b3f1ba03.png)  
 Рисунок 1.1 - Загрузка контейнера \compose\ в терминале.
 
-Затем ввести команды в терминале:
-<pre><code>git clone https://github.com/lastrise/studio.git
-cd studio
-docker build ./</code></pre>
-
 ## Разворачивание контейнера foxglove:
 Для разворачивания foxglove контейнера нужно ввести команду в терминале:
 <pre><code>docker pull whitecurl/foxglove:latest</code></pre>
+
+Либо ввести команды в терминале:
+<pre><code>git clone https://github.com/lastrise/studio.git
+cd studio
+docker build ./</code></pre>
 
 # Добавление пакета в \compose\\:
 Запустить контейнер:
