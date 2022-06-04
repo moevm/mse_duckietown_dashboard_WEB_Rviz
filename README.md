@@ -33,8 +33,7 @@ docker build ./</code></pre>
 <pre><code>cd /user-data
 mkdir packages
 cd packages
-git clone https://github.com/moevm/mse_duckietown_dashboard_WEB_Rviz
-mv mse_duckietown_dashboard_WEB_Rviz ./webviz</code></pre>
+git clone https://github.com/moevm/mse_duckietown_dashboard_WEB_Rviz ./webviz</code></pre>
 
 # Запуск проекта:
 Сначала нужно собрать образы контейнеров: foxglove, \compose\\:
