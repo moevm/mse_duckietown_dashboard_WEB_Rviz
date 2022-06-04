@@ -22,7 +22,7 @@ cd studio
 docker build ./</code></pre>
 
 ## Разворачивание контейнера foxglove:
-Для установки foxglove контейнера нужно ввести команду в терминале:
+Для разворачивания foxglove контейнера нужно ввести команду в терминале:
 <pre><code>docker pull whitecurl/foxglove:latest</code></pre>
 
 # Добавление пакета в \compose\\:
