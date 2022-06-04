@@ -1,43 +1,54 @@
 # mse_duckietown_dashboard_WEB_Rviz
 
-Проект представляет из себя внедрение в систему /compose/ приложение Foxglove. 
+Проект представляет из себя внедрение в систему \compose\ приложение Foxglove. 
 \compose\ — это платформа CMS (система управления контентом), написанная на PHP, которая предоставляет функциональные возможности для быстрой разработки веб-приложений на серверах Linux. 
 Foxglove — это веб-приложение для воспроизведения и визуализации пакетов ROS. Также данное приложение было дополнено требуемым от заказчиков функционалом.  
 В качестве технологий использовались ROS, PHP, REACT, Docker.
 
 
-# Установка и запуск Duckietown Dashbord: 
-1. Скачать докер по ссылке: https://docs.docker.com/get-docker/  
-2. В терминале ввести команду : 
-<pre><code>docker pull afdaniele/compose
-</code></pre>
+# Подготовка к запуску проекта:
+Для работы команд нужно установить docker.  
+Для запуска проекта нужно развернуть контейнеры foxglove, \compose\\, и добавить в систему \compose\ пакет.
+
+## Загрузка \compose\\:
+Для загрузки \compose\ нужно ввести команду в терминале:
+<pre><code>docker pull afdaniele/compose</code></pre>
 ![image](https://user-images.githubusercontent.com/54946557/161268701-40236ee6-8c53-41de-800a-aa28b3f1ba03.png)  
-3. Запустить контейнер. При запуске контейнера в настройках сделать доступным его 80 порт извне. Необходимо указать порт для интерфейса localhost. Сокет по этому адресу будет мостом до приложения на 80 порту контейнера.
-![image](https://user-images.githubusercontent.com/54946557/161269031-8ccb7a96-ac57-4fa1-b36d-698c771231bc.png)  
-4. Перейти в браузере по ссылке http://localhost:8080. Выполнить установку /compose/ по инструкции, которая будет выведена на экран после шага 
-![image](https://user-images.githubusercontent.com/54946557/167693601-94850600-012a-4423-850a-7e3f7b240ca1.png)
-5. Зарегистрироваться на https://www.duckietown.org, получить индивидуальный токен для входа в приложение  
-![image](https://user-images.githubusercontent.com/54946557/161269502-8494d509-bc24-4207-a7b9-9ad2682bc5b8.png)
+Рисунок 1.1 - Загрузка контейнера \compose\ в терминале.
 
+## Загрузка foxglove:
+Для загрузки foxglove контейнера нужно ввести команду в терминале:
+<pre><code>docker pull whitecurl/foxglove:latest</code></pre>
 
-# Добавление пакета Duckietown:
-Загрузить пакет в Docker-контейнер с системой /compose/ в  директорию "/user-data/packages/".
+Либо клонировать репозиторий foxglove и собрать приложение самостоятельно:
+<pre><code>git clone https://github.com/lastrise/studio.git
+cd studio
+docker build ./</code></pre>
+
+## Добавление пакета в \compose\\:
+В Docker Desktop перейти во вкладку Containers и открыть CLI терминал контейнера afdaniele/compose. В терминале контейнера ввести:
+<pre><code>cd /user-data
+mkdir packages
+cd packages
+git clone https://github.com/moevm/mse_duckietown_dashboard_WEB_Rviz
+mv mse_duckietown_dashboard_WEB_Rviz ./webviz</code></pre>
 
 # Запуск проекта:
-Сначала нужно собрать образы контейнеров: foxglove, /compose/
-1. Запустить  compose:
- <pre><code> docker run [image_id]
-</code></pre>
-2. Клонируем репозиторий:
-<pre><code> git clone https://github.com/lastrise/studio.git
-</code></pre>
-3. Запустить второй контейнер:
-<pre><code> docker run -p 8080:8080 [image id]</code></pre>
-4. Перейти в браузере по ссылке: http://localhost:8080    
-Страница профиля Duckietown Dashboard:
-![image](https://user-images.githubusercontent.com/54946557/167317629-ddec2094-efbc-485c-964f-f1db94b0b6ac.png)
-5. Нажать на кнопку: "Webviz".   
-Приложение для визуализации Webviz: 
+Сначала нужно собрать образы контейнеров: foxglove, \compose\\:
+
+Для этого нужно запустить контейнер afdaniele/compose: 
+<pre><code>docker run -p 80:80 [image_id]</code></pre>
+
+Запустить контейнер foxglove:
+<pre><code>docker run -p 8080:8080 [image_id]</code></pre>
+image_id - идентификатор image, который можно посмотреть с помощью команды:
+<pre><code>docker image ls </code></pre>
+
+Затем перейти в браузере по ссылке: http://localhost:8080. Выполнить установку \compose\ по инструкции, которая будет выведена на экран после шага(Skip; Next; Finish; Sign in as Developer). Адрес и порт визуализатора настраиваются в настройках \compose\\, а именно в \compose\ зайти во вкладку Settings » Package: webviz, установить Webviz port: 80.
+
+![image](https://user-images.githubusercontent.com/54946557/167693601-94850600-012a-4423-850a-7e3f7b240ca1.png)  
+Рисунок 1.2 - Окно после регистрации в \compose\\.  
+Перейти на вкладку Webviz.
+
 ![image](https://user-images.githubusercontent.com/54946557/167317709-908c0edc-bd11-4082-a423-2c75023395bc.png)
-
-
+Рисунок 1.3 - Приложение для визуализации Webviz.
