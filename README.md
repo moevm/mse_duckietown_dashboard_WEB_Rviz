@@ -52,7 +52,7 @@ mv mse_duckietown_dashboard_WEB_Rviz ./webviz </code></pre>
 
 ![image](https://user-images.githubusercontent.com/54946557/167693601-94850600-012a-4423-850a-7e3f7b240ca1.png)  
 Рисунок 1.3 - Окно после регистрации в \compose\.  
-Нажать на кнопку: "Webviz".
+Перейти на вкладку Webviz.
 
 ![image](https://user-images.githubusercontent.com/54946557/167317709-908c0edc-bd11-4082-a423-2c75023395bc.png)
 Рисунок 1.4 - Приложение для визуализации Webviz.
