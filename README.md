@@ -25,7 +25,7 @@ Foxglove — это веб-приложение для воспроизведе�
 cd studio
 docker build ./</code></pre>
 
-# Добавление пакета в \compose\\:
+## Добавление пакета в \compose\\:
 Запустить контейнер:
 ![_Y-nOh0YCEEYeDo-e6ZCT-fPEZ6T8LvOvOVNXuJiHzwb4iW6P0qDK_t9d8f1Tv73OusWzyiJWkmbDluJhXGUXlD7](https://user-images.githubusercontent.com/54913485/171691763-7c0f9c1f-53e3-41a2-b835-abd8162efb68.jpg)
 Рисунок 1.2 - Контейнер whitecurl/foxglove в Docker Desktop.  
